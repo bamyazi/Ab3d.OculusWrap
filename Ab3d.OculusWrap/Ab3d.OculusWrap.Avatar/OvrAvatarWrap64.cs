@@ -9,6 +9,6 @@ namespace Ab3d.OculusWrap.Avatar
     {
         internal const string _ovrPlatformDllName = "LibOVRAvatar.dll";
 
-        public override string OvrPlatformDllName { get { return _ovrPlatformDllName; } }
+        public override string OvrAvatarDllName { get { return _ovrPlatformDllName; } }
     }
 }

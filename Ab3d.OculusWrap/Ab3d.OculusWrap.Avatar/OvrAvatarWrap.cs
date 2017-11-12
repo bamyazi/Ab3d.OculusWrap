@@ -10,7 +10,7 @@ namespace Ab3d.OculusWrap.Avatar
         public const int OVR_AVATAR_MAX_MATERIAL_LAYER_COUNT = 8;
         public const int OVR_AVATAR_MAXIMUM_JOINT_COUNT = 64;
 
-        public abstract string OvrPlatformDllName { get; }
+        public abstract string OvrAvatarDllName { get; }
 
         public static OvrAvatarWrap Create()
         {
