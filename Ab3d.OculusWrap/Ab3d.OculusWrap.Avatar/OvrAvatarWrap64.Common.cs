@@ -34,6 +34,41 @@ namespace Ab3d.OculusWrap.Avatar
             return SafeNativeMethods.ovrAvatar_GetReferencedAsset(avatar.nativePointer, index);
         }
 
+        public override void Avatar_SetLeftControllerVisibility(Avatar avatar, bool visibility)
+        {
+            SafeNativeMethods.ovrAvatar_SetLeftControllerVisibility(avatar.nativePointer, visibility);
+        }
+
+        public override void Avatar_SetLeftHandGesture(Avatar avatar, AvatarHandGesture gesture)
+        {
+            SafeNativeMethods.ovrAvatar_SetLeftHandGesture(avatar.nativePointer, gesture);
+        }
+
+        public override void Avatar_SetRightControllerVisibility(Avatar avatar, bool visibility)
+        {
+            SafeNativeMethods.ovrAvatar_SetRightControllerVisibility(avatar.nativePointer, visibility);
+        }
+
+        public override void Avatar_SetRightHandGesture(Avatar avatar, AvatarHandGesture gesture)
+        {
+            SafeNativeMethods.ovrAvatar_SetRightHandGesture(avatar.nativePointer, gesture);
+        }
+
+        public override void Avatar_SetActiveCapabilities(Avatar avatar, AvatarCapabilities capabilities)
+        {
+            SafeNativeMethods.ovrAvatar_SetActiveCapabilities(avatar.nativePointer, capabilities);
+        }
+
+        public override void Avatar_ClearCustomBasePosition(Avatar avatar)
+        {
+            SafeNativeMethods.ovrAvatar_ClearCustomBasePosition(avatar.nativePointer);
+        }
+
+        public override void Avatar_SetCustomBasePosition(Avatar avatar, AvatarVector3f position)
+        {
+            SafeNativeMethods.ovrAvatar_SetCustomBasePosition(avatar.nativePointer, position);
+        }
+
         public override void Avatar_Destroy(Avatar avatar)
         {
             SafeNativeMethods.ovrAvatar_Destroy(avatar.nativePointer);

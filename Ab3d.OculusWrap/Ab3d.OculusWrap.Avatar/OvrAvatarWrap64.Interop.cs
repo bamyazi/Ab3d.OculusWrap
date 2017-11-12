@@ -28,33 +28,33 @@ namespace Ab3d.OculusWrap.Avatar
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_SetLeftControllerVisibility", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr ovrAvatar_SetLeftControllerVisibility(IntPtr avatar, bool visible);
+            internal static extern void ovrAvatar_SetLeftControllerVisibility(IntPtr avatar, bool visible);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_SetRightControllerVisibility", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr ovrAvatar_SetRightControllerVisibility(IntPtr avatar, bool visible);
+            internal static extern void ovrAvatar_SetRightControllerVisibility(IntPtr avatar, bool visible);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_SetLeftHandGesture", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr ovrAvatar_SetLeftHandGesture(IntPtr avatar, AvatarHandGesture gesture);
+            internal static extern void ovrAvatar_SetLeftHandGesture(IntPtr avatar, AvatarHandGesture gesture);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_SetRightHandGesture", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr ovrAvatar_SetRightHandGesture(IntPtr avatar, AvatarHandGesture gesture);
+            internal static extern void ovrAvatar_SetRightHandGesture(IntPtr avatar, AvatarHandGesture gesture);
 
             //TODO: Add support for custom gestures
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_SetActiveCapabilities", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr ovrAvatar_SetActiveCapabilities(IntPtr avatar, AvatarCapabilities capabilities);
+            internal static extern void ovrAvatar_SetActiveCapabilities(IntPtr avatar, AvatarCapabilities capabilities);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_ClearCustomBasePosition", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr ovrAvatar_ClearCustomBasePosition(IntPtr avatar);
+            internal static extern void ovrAvatar_ClearCustomBasePosition(IntPtr avatar);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_SetCustomBasePosition", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern IntPtr ovrAvatar_SetCustomBasePosition(IntPtr avatar, AvatarVector3f position);
+            internal static extern void ovrAvatar_SetCustomBasePosition(IntPtr avatar, AvatarVector3f position);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatar_GetReferencedAssetCount", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
@@ -184,6 +184,56 @@ namespace Ab3d.OculusWrap.Avatar
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarRenderPart_GetProjectorRender", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
             internal static extern IntPtr ovrAvatarRenderPart_GetProjectorRender(IntPtr avatarRenderPart);
+            #endregion
+
+            #region ovrAvatarSkinnedMeshRender
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRender_GetTransform", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern AvatarTransform ovrAvatarSkinnedMeshRender_GetTransform(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetTransform", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern AvatarTransform ovrAvatarSkinnedMeshRenderPBS_GetTransform(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRender_GetVisibilityMask", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern UInt32 ovrAvatarSkinnedMeshRender_GetVisibilityMask(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetVisibilityMask", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern UInt32 ovrAvatarSkinnedMeshRenderPBS_GetVisibilityMask(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRender_MaterialStateChanged", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern bool ovrAvatarSkinnedMeshRender_MaterialStateChanged(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRender_GetMaterialState", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern AvatarMaterialState ovrAvatarSkinnedMeshRender_GetMaterialState(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRender_GetDirtyJoints", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern UInt64 ovrAvatarSkinnedMeshRender_GetDirtyJoints(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetDirtyJoints", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern UInt64 ovrAvatarSkinnedMeshRenderPBS_GetDirtyJoints(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRender_GetJointTransform", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern AvatarTransform ovrAvatarSkinnedMeshRender_GetJointTransform(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetJointTransform", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern AvatarTransform ovrAvatarSkinnedMeshRenderPBS_GetJointTransform(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetAlbedoTextureAssetID", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern UInt64 ovrAvatarSkinnedMeshRenderPBS_GetAlbedoTextureAssetID(IntPtr avatarRenderPart);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetSurfaceTextureAssetID", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
+            internal static extern UInt64 ovrAvatarSkinnedMeshRenderPBS_GetSurfaceTextureAssetID(IntPtr avatarRenderPart);
             #endregion
         }
     }

@@ -35,6 +35,13 @@ namespace Ab3d.OculusWrap.Avatar
         public abstract Avatar Avatar_Create(AvatarSpecification avatarSpecification, AvatarCapabilities avatarCapabilities);
         public abstract UInt32 Avatar_GetReferencedAssetCount(Avatar avatar);
         public abstract UInt64 Avatar_GetReferencedAsset(Avatar avatar, UInt32 index);
+        public abstract void Avatar_SetLeftControllerVisibility(Avatar avatar, bool visibility);
+        public abstract void Avatar_SetRightControllerVisibility(Avatar avatar, bool visibility);
+        public abstract void Avatar_SetLeftHandGesture(Avatar avatar, AvatarHandGesture gesture);
+        public abstract void Avatar_SetRightHandGesture(Avatar avatar, AvatarHandGesture gesture);
+        public abstract void Avatar_SetActiveCapabilities(Avatar avatar, AvatarCapabilities capabilities);
+        public abstract void Avatar_ClearCustomBasePosition(Avatar avatar);
+        public abstract void Avatar_SetCustomBasePosition(Avatar avatar, AvatarVector3f position);
         public abstract void Avatar_Destroy(Avatar avatar);
         #endregion
 
