@@ -140,10 +140,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ab3d.DXEngine.OculusWrap\Ab3d.DXEngine.OculusWrap.csproj">
-      <Project>{cc2e9f87-c96d-44c2-ab14-4a7156bbf24f}</Project>
-      <Name>Ab3d.DXEngine.OculusWrap</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Ab3d.OculusWrap\Ab3d.OculusWrap.csproj">
       <Project>{b195b4f2-508e-4449-9422-36e0622a654e}</Project>
       <Name>Ab3d.OculusWrap</Name>

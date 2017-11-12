@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B62FD4FF-AF71-410D-A234-745DC92FA268}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ab3d.OculusWrap.Avatar</RootNamespace>
+    <AssemblyName>Ab3d.OculusWrap.Avatar</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvatarHelper.cs" />
+    <Compile Include="OvrAvatarWrap.cs" />
+    <Compile Include="OvrAvatarWrap64.Common.cs" />
+    <Compile Include="OvrAvatarWrap64.cs" />
+    <Compile Include="OvrAvatarWrap64.Interop.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDK\Avatar.cs" />
+    <Compile Include="SDK\AvatarAsset.cs" />
+    <Compile Include="SDK\AvatarAssetType.cs" />
+    <Compile Include="SDK\AvatarBaseComponent.cs" />
+    <Compile Include="SDK\AvatarBodyComponent.cs" />
+    <Compile Include="SDK\AvatarButton.cs" />
+    <Compile Include="SDK\AvatarCapabilities.cs" />
+    <Compile Include="SDK\AvatarComponent.cs" />
+    <Compile Include="SDK\AvatarControllerComponent.cs" />
+    <Compile Include="SDK\AvatarHandComponent.cs" />
+    <Compile Include="SDK\AvatarHandGesture.cs" />
+    <Compile Include="SDK\AvatarHandInputState.cs" />
+    <Compile Include="SDK\AvatarMaterialLayerBlendMode.cs" />
+    <Compile Include="SDK\AvatarMaterialLayerSampleMode.cs" />
+    <Compile Include="SDK\AvatarMaterialLayerState.cs" />
+    <Compile Include="SDK\AvatarMaterialMaskType.cs" />
+    <Compile Include="SDK\AvatarMaterialState.cs" />
+    <Compile Include="SDK\AvatarMeshAssetData.cs" />
+    <Compile Include="SDK\AvatarMeshVertex.cs" />
+    <Compile Include="SDK\AvatarMessage.cs" />
+    <Compile Include="SDK\AvatarMessageType.cs" />
+    <Compile Include="SDK\AvatarMessage_AssetLoaded.cs" />
+    <Compile Include="SDK\AvatarMessage_AvatarSpecification.cs" />
+    <Compile Include="SDK\AvatarPacket.cs" />
+    <Compile Include="SDK\AvatarQuatf.cs" />
+    <Compile Include="SDK\AvatarRenderPart.cs" />
+    <Compile Include="SDK\AvatarRenderPartType.cs" />
+    <Compile Include="SDK\AvatarRenderPart_ProjectorRender.cs" />
+    <Compile Include="SDK\AvatarRenderPart_SkinnedMeshRender.cs" />
+    <Compile Include="SDK\AvatarRenderPart_SkinnedMeshRenderPBS.cs" />
+    <Compile Include="SDK\AvatarSkinnedMeshPose.cs" />
+    <Compile Include="SDK\AvatarSpecification.cs" />
+    <Compile Include="SDK\AvatarTextureAssetData.cs" />
+    <Compile Include="SDK\AvatarTextureFormat.cs" />
+    <Compile Include="SDK\AvatarTouch.cs" />
+    <Compile Include="SDK\AvatarTransform.cs" />
+    <Compile Include="SDK\AvatarVector3f.cs" />
+    <Compile Include="SDK\AvatarVector4f.cs" />
+    <Compile Include="SDK\AvatarVisibilityFlags.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ab3d.OculusWrap\Ab3d.OculusWrap.csproj">
+      <Project>{11ab87cb-3b83-4b81-92c4-abf5c7935a3f}</Project>
+      <Name>Ab3d.OculusWrap</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
