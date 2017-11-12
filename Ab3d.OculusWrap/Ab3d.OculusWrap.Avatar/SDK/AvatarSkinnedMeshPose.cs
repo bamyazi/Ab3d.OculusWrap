@@ -12,9 +12,9 @@ namespace Ab3d.OculusWrap.Avatar
     {
         public UInt32 JointCount;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
-        public AvatarTransform[] JointTransform;
+        public AvatarTransform[] JointTransforms;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
-        public int[] JointParents;
+        public int[] JointParents;      
         //[MarshalAs(UnmanagedType.ByValArray, ArraySubType = UnmanagedType.LPStr, SizeConst = 64)]
         //public string[] JointNames;
     }
