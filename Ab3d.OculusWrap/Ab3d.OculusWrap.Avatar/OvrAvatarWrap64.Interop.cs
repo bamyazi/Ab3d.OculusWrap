@@ -221,11 +221,11 @@ namespace Ab3d.OculusWrap.Avatar
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRender_GetJointTransform", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern AvatarTransform ovrAvatarSkinnedMeshRender_GetJointTransform(IntPtr avatarRenderPart);
+            internal static extern AvatarTransform ovrAvatarSkinnedMeshRender_GetJointTransform(IntPtr avatarRenderPart, UInt32 jointIndex);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetJointTransform", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]
-            internal static extern AvatarTransform ovrAvatarSkinnedMeshRenderPBS_GetJointTransform(IntPtr avatarRenderPart);
+            internal static extern AvatarTransform ovrAvatarSkinnedMeshRenderPBS_GetJointTransform(IntPtr avatarRenderPart, UInt32 jointIndex);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(_ovrPlatformDllName, EntryPoint = "ovrAvatarSkinnedMeshRenderPBS_GetAlbedoTextureAssetID", SetLastError = false, CallingConvention = CallingConvention.Cdecl)]

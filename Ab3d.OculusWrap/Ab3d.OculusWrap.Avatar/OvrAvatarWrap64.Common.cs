@@ -229,5 +229,67 @@ namespace Ab3d.OculusWrap.Avatar
                 typeof(AvatarRenderPart_ProjectorRender));
         }
         #endregion
+
+        #region AVATAR SKINNED MESH RENDER
+        public override AvatarTransform AvatarSkinnedMeshRender_GetTransform(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRender_GetTransform(avatarRenderPart.nativePointer);
+        }
+
+        public override AvatarTransform AvatarSkinnedMeshRenderPBS_GetTransform(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRenderPBS_GetTransform(avatarRenderPart.nativePointer);
+        }
+
+        public override UInt32 AvatarSkinnedMeshRender_GetVisibilityMask(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRender_GetVisibilityMask(avatarRenderPart.nativePointer);
+        }
+
+        public override UInt32 AvatarSkinnedMeshRenderPBS_GetVisibilityMask(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRender_GetVisibilityMask(avatarRenderPart.nativePointer);
+        }
+
+        public override UInt64 AvatarSkinnedMeshRenderPBS_GetAlbedoTextureAssetID(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRenderPBS_GetAlbedoTextureAssetID(avatarRenderPart.nativePointer);
+        }
+
+        public override AvatarMaterialState AvatarSkinnedMeshRender_GetMaterialState(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRender_GetMaterialState(avatarRenderPart.nativePointer);
+        }
+
+        public override bool AvatarSkinnedMeshRender_MaterialStateChanged(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRender_MaterialStateChanged(avatarRenderPart.nativePointer);
+        }
+
+        public override UInt64 AvatarSkinnedMeshRender_GetDirtyJoints(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRender_GetDirtyJoints(avatarRenderPart.nativePointer);
+        }
+
+        public override UInt64 AvatarSkinnedMeshRenderPBS_GetDirtyJoints(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRenderPBS_GetDirtyJoints(avatarRenderPart.nativePointer);
+        }
+
+        public override AvatarTransform AvatarSkinnedMeshRender_GetJointTransform(AvatarRenderPart avatarRenderPart, UInt32 jointIndex)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRender_GetJointTransform(avatarRenderPart.nativePointer, jointIndex);
+        }
+
+        public override AvatarTransform AvatarSkinnedMeshRenderPBS_GetJointTransform(AvatarRenderPart avatarRenderPart, UInt32 jointIndex)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRenderPBS_GetJointTransform(avatarRenderPart.nativePointer, jointIndex);
+        }
+
+        public override UInt64 AvatarSkinnedMeshRenderPBS_GetSurfaceTextureAssetID(AvatarRenderPart avatarRenderPart)
+        {
+            return SafeNativeMethods.ovrAvatarSkinnedMeshRenderPBS_GetSurfaceTextureAssetID(avatarRenderPart.nativePointer);
+        }
+        #endregion
     }
 }

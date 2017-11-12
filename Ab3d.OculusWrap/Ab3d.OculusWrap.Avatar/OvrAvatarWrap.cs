@@ -76,5 +76,20 @@ namespace Ab3d.OculusWrap.Avatar
         public abstract AvatarRenderPart_SkinnedMeshRenderPBS AvatarRenderPart_GetSkinnedMeshRenderPBS(AvatarRenderPart avatarRenderPart);
         public abstract AvatarRenderPart_ProjectorRender AvatarRenderPart_GetProjectorRender(AvatarRenderPart avatarRenderPart);
         #endregion
+
+        #region AVATAR SKINNED MESH RENDER
+        public abstract AvatarTransform AvatarSkinnedMeshRender_GetTransform(AvatarRenderPart avatarRenderPart);
+        public abstract AvatarTransform AvatarSkinnedMeshRenderPBS_GetTransform(AvatarRenderPart avatarRenderPart);
+        public abstract UInt32 AvatarSkinnedMeshRender_GetVisibilityMask(AvatarRenderPart avatarRenderPart);
+        public abstract UInt32 AvatarSkinnedMeshRenderPBS_GetVisibilityMask(AvatarRenderPart avatarRenderPart);
+        public abstract bool AvatarSkinnedMeshRender_MaterialStateChanged(AvatarRenderPart avatarRenderPart);
+        public abstract AvatarMaterialState AvatarSkinnedMeshRender_GetMaterialState(AvatarRenderPart avatarRenderPart);
+        public abstract UInt64 AvatarSkinnedMeshRender_GetDirtyJoints(AvatarRenderPart avatarRenderPart);
+        public abstract UInt64 AvatarSkinnedMeshRenderPBS_GetDirtyJoints(AvatarRenderPart avatarRenderPart);
+        public abstract AvatarTransform AvatarSkinnedMeshRender_GetJointTransform(AvatarRenderPart avatarRenderPart, UInt32 jointIndex);
+        public abstract AvatarTransform AvatarSkinnedMeshRenderPBS_GetJointTransform(AvatarRenderPart avatarRenderPart, UInt32 jointIndex);
+        public abstract UInt64 AvatarSkinnedMeshRenderPBS_GetAlbedoTextureAssetID(AvatarRenderPart avatarRenderPart);
+        public abstract UInt64 AvatarSkinnedMeshRenderPBS_GetSurfaceTextureAssetID(AvatarRenderPart avatarRenderPart);
+        #endregion
     }
 }
