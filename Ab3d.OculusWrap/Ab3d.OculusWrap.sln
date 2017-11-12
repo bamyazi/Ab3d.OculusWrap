@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ab3d.OculusWrap", "Ab3d.OculusWrap\Ab3d.OculusWrap.csproj", "{11AB87CB-3B83-4B81-92C4-ABF5C7935A3F}"
 EndProject
@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ab3d.OculusWrap.Avatar", "Ab3d.OculusWrap.Avatar\Ab3d.OculusWrap.Avatar.csproj", "{B62FD4FF-AF71-410D-A234-745DC92FA268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ab3d.Avatar.Demo1", "C:\Users\Andrej\Desktop\Oculus Avatar\AvatarDemo\Ab3d.Avatar.Demo1.csproj", "{AC5225D2-F66E-4B33-B856-60284252C426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ab3d.OculusWrap.Platform", "Ab3d.OculusWrap.Platform\Ab3d.OculusWrap.Platform.csproj", "{D9871F66-CA2E-4290-B4ED-4E342614679B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +42,14 @@ Global
 		{B62FD4FF-AF71-410D-A234-745DC92FA268}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B62FD4FF-AF71-410D-A234-745DC92FA268}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B62FD4FF-AF71-410D-A234-745DC92FA268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC5225D2-F66E-4B33-B856-60284252C426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5225D2-F66E-4B33-B856-60284252C426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5225D2-F66E-4B33-B856-60284252C426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5225D2-F66E-4B33-B856-60284252C426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9871F66-CA2E-4290-B4ED-4E342614679B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9871F66-CA2E-4290-B4ED-4E342614679B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9871F66-CA2E-4290-B4ED-4E342614679B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9871F66-CA2E-4290-B4ED-4E342614679B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
