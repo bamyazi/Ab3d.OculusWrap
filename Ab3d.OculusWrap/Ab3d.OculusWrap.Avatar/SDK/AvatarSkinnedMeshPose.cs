@@ -11,11 +11,14 @@ namespace Ab3d.OculusWrap.Avatar
     public struct AvatarSkinnedMeshPose
     {
         public UInt32 JointCount;
+
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
-        public AvatarTransform[] JointTransforms;
+        public AvatarTransform[] JointTransforms; 
+        
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
-        public int[] JointParents;      
-        //[MarshalAs(UnmanagedType.ByValArray, ArraySubType = UnmanagedType.LPStr, SizeConst = 64)]
-        //public string[] JointNames;
+        public Int32[] JointParents;
+
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
+        internal IntPtr[] jointNames;
     }
 }

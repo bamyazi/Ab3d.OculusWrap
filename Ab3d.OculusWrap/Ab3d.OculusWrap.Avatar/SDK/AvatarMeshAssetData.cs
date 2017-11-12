@@ -14,6 +14,8 @@ namespace Ab3d.OculusWrap.Avatar
         public IntPtr VertexBuffer;
         public UInt32 IndexCount;
         public IntPtr IndexBuffer;
+
+        [MarshalAs(UnmanagedType.Struct)]
         public AvatarSkinnedMeshPose SkinnedBindPose;
 
         // THIS IS UGLY - NOT FIGURED OUT HOW TO DO IT BETTER YET, AND IT WORKS FOR TESTING
