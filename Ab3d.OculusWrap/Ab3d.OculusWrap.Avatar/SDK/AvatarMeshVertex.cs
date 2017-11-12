@@ -22,9 +22,21 @@ namespace Ab3d.OculusWrap.Avatar
         public float TW;
         public float U;
         public float V;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public byte[] blendIndices;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public float[] blendWeights;
+
+        // Commented to allow using GCHandle.Alloc on array of AvatarMeshVertex (to make this struct blitable)
+        //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        //public byte[] blendIndices;
+        //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        //public float[] blendWeights;
+
+        public byte BlendIndice0;
+        public byte BlendIndice1;
+        public byte BlendIndice2;
+        public byte BlendIndice3;
+
+        public float BlendWeight0;
+        public float BlendWeight1;
+        public float BlendWeight2;
+        public float BlendWeight3;
     }
 }
